@@ -125,11 +125,6 @@ app.post("/delete", (req, res) => {
   }
 });
 
-let port = process.env.PORT;
-if (port == pull || port =="") {
-  port = 3000;
-}
-
-app.listen(port, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("Server is running on port 3000");
 });
